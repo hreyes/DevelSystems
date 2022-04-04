@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "72dd59f2-d817-4984-ad6a-3546aa40dde1",
+		"name": "DevelSystems",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01.-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Password\": \"Qazpoi.12\",\r\n    \"Usuario\":\"mail@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7024/api/LoginApi/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"LoginApi",
+						"Login"
+					]
+				},
+				"description": "Login para obtner token"
+			},
+			"response": [
+				{
+					"name": "Ejemplo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Password\": \"Qazpoi.12\",\r\n    \"Usuario\":\"mail@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7024/api/LoginApi/Login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7024",
+							"path": [
+								"api",
+								"LoginApi",
+								"Login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Apr 2022 01:33:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache,no-store"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": ".AspNetCore.Identity.Application=CfDJ8C1qnhVz5RxFo-Ben_WQ2ab5ZdE1MOkJC9Dnc5okWhMoCNaC6fLsLc4HAfCdJo2V35zYKLid1G4m_Y-dfceQfZBBSC_mPwo3G0Co20lpcROLOLn-BKNvxS8w526mEEdutDfY1xImedkSmwOJe4Ld8GY3ztX4XcCyKgN32reZrg9W0mWTbtrdKPdBfpsdwWUbnSnMb68AUA62E3DQP0M0g0yLBfIyeQoohF3uCsOBUfpGThHQkgTFK6iDmgKhTkh-GbyYVXl16Fb5AV2DrTmqdqh4niifJ237IZDCUijH5icw-xCC_BZNaBsroUfokfhC16m40moTQvhY3mNVvwRvHrWxY_tx8B41ATHyD7qKpgei3BZSip9tBxqevfmQmKQcO9I-6IeabG79h98Qt0VTRO6hEw1D7hViqjPfKUl43C3fSGAVL27lZufmc8s3k7-rU4FKzb9GeZS6pGwVB6uXYiHXqGmvddDvXPAzyDzkCn4KLq03cSy-hGIoPqMDTigQfrCO99fv2XHRbxihvv6kxP69dxf-fpfiHoMlAyWLIPjwKi0M1bxUJKTR7jzSdHrBD6i210fIl5WzefKJF-2f3pk01PXfVnbtTCX__gzL0upVK2l_FTGyLNPFMgIppyWWI8WThVFeM_DScH5mpWNcGwEMtNuuHADPVQ0IW4Sji0MtttG_viFPDQrhtXbdnvbzeBv5wRmi_Fm_FTbCWRnro9kSn6Po9s61woS3wh8KCRIX; path=/; secure; samesite=lax; httponly"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8\""
+				}
+			]
+		},
+		{
+			"name": "02.-Obtner Todas Las Encuestas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7024/api/EncuestasApi/GetEncuestas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"EncuestasApi",
+						"GetEncuestas"
+					]
+				},
+				"description": "Obtiene todas las encuestas con sus preguntas"
+			},
+			"response": []
+		},
+		{
+			"name": "03.-Crear Encuestas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\":\"Encuesta 1\",\r\n    \"Descripcion\":\"Descripcion de la Encuesta\",\r\n    \"Preguntas\":[\r\n        {\r\n            \"Nombre\":\"Pregunta 1\",\r\n            \"Titulo\":\"Color del mar\",\r\n            \"Requerido\":false,\r\n            \"Tipo\":0            \r\n        },\r\n        {\r\n            \"Nombre\":\"Pregunta 3\",\r\n            \"Titulo\":\"2+2\",\r\n            \"Requerido\":true,\r\n            \"Tipo\":1            \r\n        },\r\n        {\r\n            \"Nombre\":\"Pregunta 2\",\r\n            \"Titulo\":\"Fecha del descubrimiento de america\",\r\n            \"Requerido\":true,\r\n            \"Tipo\":2            \r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7024/api/EncuestasApi/CrearEncuestas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"EncuestasApi",
+						"CrearEncuestas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Ejemplo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Encuesta 1\",\r\n    \"Descripcion\":\"Descripcion de la Encuesta\",\r\n    \"Preguntas\":[\r\n        {\r\n            \"Nombre\":\"Pregunta 1\",\r\n            \"Titulo\":\"Dos mas dos?\",\r\n            \"Requerido\":false,\r\n            \"Tipo\":\"Text\"           \r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7024/api/EncuestasApi/CrearEncuestas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7024",
+							"path": [
+								"api",
+								"EncuestasApi",
+								"CrearEncuestas"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Apr 2022 02:17:11 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "https://localhost:7024/api/EncuestasApi/1b464968-cf85-41c9-06b2-08da15e136d0"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"1b464968-cf85-41c9-06b2-08da15e136d0\",\n    \"nombre\": \"ENCUESTA 1\",\n    \"descripcion\": \"DESCRIPCION DE LA ENCUESTA\",\n    \"preguntas\": [\n        {\n            \"id\": \"6a8d13d7-9aa0-4249-35c6-08da15e136d8\",\n            \"nombre\": \"Pregunta 1\",\n            \"titulo\": \"Dos mas dos?\",\n            \"requerido\": false,\n            \"tipo\": \"Text\",\n            \"encuestaId\": \"1b464968-cf85-41c9-06b2-08da15e136d0\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "04.-Obtener Una Encuesta por su Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7024/api/EncuestasApi/GetByIdEncuestas?Id=3062bb28-ddab-46ed-7f1b-08da15f0231d",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"EncuestasApi",
+						"GetByIdEncuestas"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "3062bb28-ddab-46ed-7f1b-08da15f0231d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "05.-Añadir Una pregunta a Encuesta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\":\"Pregunta 2\",\r\n    \"Titulo\":\"Color del agua\",\r\n    \"Requerido\":true,\r\n    \"Tipo\":0,\r\n    \"EncuestaId\":\"3062bb28-ddab-46ed-7f1b-08da15f0231d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7024/api/PreguntasApi/CrearPreguntas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"PreguntasApi",
+						"CrearPreguntas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Ejemplo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Pregunta 1\",\r\n    \"Titulo\":\"Color del agua\",\r\n    \"Requerido\":true,\r\n    \"Tipo\":\"Numeric\",\r\n    \"EncuestaId\":\"b1cd2a0a-986d-417f-3ebb-08da15ddda93\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7024/api/PreguntasApi/CrearPreguntas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7024",
+							"path": [
+								"api",
+								"PreguntasApi",
+								"CrearPreguntas"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Apr 2022 03:28:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "https://localhost:7024/api/PreguntasApi/5e0d7bd7-f6f7-49ae-cbde-08da15eb4006"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"5e0d7bd7-f6f7-49ae-cbde-08da15eb4006\",\n    \"nombre\": \"PREGUNTA 1\",\n    \"titulo\": \"COLOR DEL AGUA\",\n    \"requerido\": true,\n    \"tipo\": \"NUMERIC\",\n    \"encuestaId\": \"b1cd2a0a-986d-417f-3ebb-08da15ddda93\"\n}"
+				}
+			]
+		},
+		{
+			"name": "06.-Borrar una encuesta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7024/api/EncuestasApi/DeleteEncuestas?Id=c2a4f526-21f4-4201-c2a0-08da15ef37d4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"EncuestasApi",
+						"DeleteEncuestas"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "c2a4f526-21f4-4201-c2a0-08da15ef37d4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "07.-Editar una encuesta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\":\"Encuesta\",\r\n    \"Descripcion\":\"Descripcion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7024/api/EncuestasApi/EditEncuestas?Id=3062bb28-ddab-46ed-7f1b-08da15f0231d",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"EncuestasApi",
+						"EditEncuestas"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "3062bb28-ddab-46ed-7f1b-08da15f0231d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "08.-Borrar una pregunta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7024/api/PreguntasApi/DeletePreguntas?Id=6efbf9d0-0a05-4457-6e04-08da15f02329",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"PreguntasApi",
+						"DeletePreguntas"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "6efbf9d0-0a05-4457-6e04-08da15f02329"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "09.-Editar una pregunta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"PREGUNTA 3\",\r\n    \"titulo\": \"5+5\",\r\n    \"requerido\": true,\r\n    \"tipo\": 1,\r\n    \"encuestaId\": \"3062bb28-ddab-46ed-7f1b-08da15f0231d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7024/api/PreguntasApi/EditPreguntas?Id=a12956c3-0488-4c49-c580-08da15f472ff",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"PreguntasApi",
+						"EditPreguntas"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "a12956c3-0488-4c49-c580-08da15f472ff"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10.-Obtener Respuestas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYWlsQG1haWwuY29tIiwianRpIjoiNzk1ZWUxNTYtMGRmZC00NTU1LWE1Y2EtYTE1ZDBhOWVjZTNhIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhZWI4NWVmNi05ODRlLTQ3MTQtOTgyZi1jYTNhYjIyYmUzMWUiLCJleHAiOjE2NDk0NjgwMjcsImlzcyI6IkFwcEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiRGV2ZWxTeXN0ZW1zQ2xpZW50In0.tvIh6lUmgIK_HzNJmS_s9F5pxL9ifbIxyHErSWalX-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7024/api/EncuestasApi/GetEncuestas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7024",
+					"path": [
+						"api",
+						"EncuestasApi",
+						"GetEncuestas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

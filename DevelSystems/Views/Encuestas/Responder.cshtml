@@ -1,0 +1,88 @@
+﻿@using DevelSystem.Models;
+@model DevelSystem.Models.Encuesta
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped table-condensed table-hover pull-left">
+            <tr>
+                <td><label asp-for="Nombre"></label></td>
+                <td>@Model.Nombre</td>
+            </tr>
+            <tr>
+                <td><label asp-for="Descripcion"></label></td>
+                <td>@Model.Descripcion</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<form name="Responder" id="Responder">
+    <div class="row">
+        <div class="col-md-12">
+            @foreach (var item in @Model.Preguntas)
+            {
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">@item.Titulo</label>
+                    <div class="col-sm-10">
+                        @switch (@item.Tipo)
+                        {
+                            case DevelSystem.Tipo.NUMERO:
+                                <input id="@item.Id" type="number" data-val="@item.Requerido.ToString()" class="form-control" />
+                                break;
+                            case DevelSystem.Tipo.TEXTO:
+                                <input id="@item.Id" type="text" data-val="@item.Requerido.ToString()" class="form-control" />
+                                break;
+                            case DevelSystem.Tipo.FECHA:
+                                <input id="@item.Id" type="datetime-local" data-val="@item.Requerido.ToString()" class="form-control" />
+                                break;
+                        }
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <hr />
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    document.getElementById('Responder').addEventListener("submit", function (e) {
+        e.preventDefault();
+        var arreglo = new Array();
+        var datos = document.querySelector('#Responder');
+        for (var key of datos) {
+            var item={
+                 PreguntaId: key.id,
+                 ValorRespuesta: key.value,
+                 Titulo:"",
+                 EncuestaId : "@Model.Id"
+             };
+             if(key.type != "submit")
+                arreglo.push(item);
+        }
+         var ajax = new ej.base.Ajax({
+                url: '/Api/RespuestasApi/CrearRespuestas',
+                type: 'post',
+                dataType: "json",
+                data: JSON.stringify(arreglo),
+                content: 'application/json'
+            });
+            ajax.send();
+            ajax.onSuccess = function (dataAmigoID) {
+                window.location.href = "/Encuestas/Index"
+            } ;
+            ajax.onFailure = function (data) {
+                console.log("falla");
+            };
+    });
+</script>
