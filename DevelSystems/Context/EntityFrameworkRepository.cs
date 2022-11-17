@@ -77,7 +77,7 @@ namespace DevelSystem.Context
             {
                 throw new ArgumentNullException("entity");
             }
-            objectSet.Remove(entity);
+            objectSet.Remove(enity);
         }
 
         public DbContext Context
